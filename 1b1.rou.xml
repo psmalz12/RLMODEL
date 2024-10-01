@@ -1,0 +1,29 @@
+<routes>
+    <!-- Define vehicle types -->
+    <vType id="Ambulance" length="5" accel="2.6" decel="4.5" sigma="1.0" guiShape="emergency" color="white" />
+    <vType id="veh_passenger" length="5" accel="2.6" decel="4.5" sigma="1.0" guiShape="passenger" color="green" />
+    <vType id="fueltruck" length="8" accel="2.6" decel="4.5" sigma="1.0" guiShape="truck/trailer" color="red" />
+
+    <!-- Vehicle Flows -->
+    <!-- Flow for passenger vehicles from E0 (West) to E1 (East) -->
+    <flow id="flow_1" from="E0" to="E1" type="veh_passenger" begin="0" end="100000" probability="0.1" departSpeed="max" departPos="base" departLane="best"/>
+
+    <!-- Flow for ambulances from E0 (West) to E1 (East) -->
+    <flow id="flow_2" from="E0" to="E1" type="Ambulance" begin="0" end="100000" probability="0.05" departSpeed="max" departPos="base" departLane="best"/>
+
+    <!-- Flow for passenger vehicles from E1 (East) to E0 (West) -->
+    <flow id="flow_3" from="-E1" to="-E0" type="veh_passenger" begin="0" end="100000" probability="0.1" departSpeed="max" departPos="base" departLane="best"/>
+
+    <!-- Flow for ambulances from E1 (East) to E0 (West)
+    <flow id="flow_4" from="-E1" to="-E0" type="Ambulance" begin="0" end="100000" probability="0.05" departSpeed="max" departPos="base" departLane="best"/>
+-->
+     Flow for passenger vehicles from E2 (South) to E3 (North)
+    <flow id="flow_5" from="-E2" to="E3" type="veh_passenger" begin="0" end="100000" probability="0.1" departSpeed="max" departPos="base" departLane="best"/>
+
+    <!-- Flow for passenger vehicles from E3 (North) to E2 (South)
+    <flow id="flow_6" from="-E3" to="E2" type="veh_passenger" begin="0" end="100000" probability="0.1" departSpeed="max" departPos="base" departLane="best"/>
+ -->
+    <!-- Flow for fuel trucks from E1 (East) to E0 (West)
+    <flow id="flow_7" from="E1" to="E0" type="fueltruck" begin="0" end="100000" probability="0.05" departSpeed="max" departPos="base" departLane="best"/>
+-->
+</routes>

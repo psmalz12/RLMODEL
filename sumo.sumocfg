@@ -1,0 +1,15 @@
+<configuration>
+    <input>
+        <net-file value="C:/Users/psmalz12/OneDrive/PGR/pycharm/RLMODEL2/1b1-2.net.xml"/>
+        <route-files value="C:/Users/psmalz12/OneDrive/PGR/pycharm/RLMODEL2/1b1.rou.xml"/>
+    </input>
+
+    <time>
+        <begin value="0"/>
+        <end value="10000"/>
+    </time>
+
+    <report>
+        <verbose value="true"/>
+    </report>
+</configuration>
